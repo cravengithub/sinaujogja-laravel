@@ -14,23 +14,21 @@ class DivisiController extends Controller
     /**
      * Display a listing of the resource.
      */
-    /*
+
     public function index(Request $request)
     {
-        // if (Auth::check()) {
         $data['divisi'] = Divisi::all();
-        // $this->pre($request->session()->all());
         return view('divisi.list', $data);
-        // }
-        // return redirect('/login')->withErrors(['message' => 'Anda belum login'])->onlyInput('email');
-    }*/
+        return redirect('/login')->withErrors(['message' => 'Anda belum login'])->onlyInput('email');
+    }
+    /*
     public function index(Request $request)
     {
         $url = 'http://localhost:8080/api/divisi/list';
         $content = Http::get($url);
         $divisi = json_decode($content->body());
         return view('divisi.list', ['divisi' => $divisi]);
-    }
+    }*/
 
     /**
      * Show the form for creating a new resource.
@@ -48,7 +46,7 @@ class DivisiController extends Controller
      */
     public function store(Request $request)
     {
-        /*
+        
         $rules = [
             'nama' => 'required | max:50',
             'keterangan' => 'required'
@@ -67,14 +65,15 @@ class DivisiController extends Controller
             $divisi->nama = $validate['nama'];
             $divisi->keterangan = $validate['keterangan'];
             $divisi->save();
-        }*/
+        }
+        /*
         $url = 'http://localhost:8080/api/divisi/store';
         $divisi = [
             'nama' => $request->nama,
             'keterangan' => $request->keterangan
         ];
         $response = Http::post($url, $divisi);
-        // $this->pre($response->body());
+        // $this->pre($response->body());*/
         return redirect('divisi')->with('success', 'Data yang Anda Simpan Berhasil');
     }
 

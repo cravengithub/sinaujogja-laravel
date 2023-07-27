@@ -33,5 +33,5 @@ Route::controller(AuthController::class)->group(function () {
 Route::controller(DivisiAPIController::class)->prefix('/divisi')->group(function () {
     Route::get('/list', 'index')->middleware('auth:sanctum');
     Route::post('/store', 'store')->middleware('auth:sanctum');
-    Route::delete('/destroy', 'destroy')->middleware('auth:sanctum');;
+    Route::delete('/destroy', 'destroy')->middleware('auth:sanctum');
 });

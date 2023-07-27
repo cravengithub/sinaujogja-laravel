@@ -10,7 +10,7 @@
             {{ session('success') }}
         </div>
     @endif
-    <table>
+    <table class="table table-bordered">
         <tr>
             <th>ID</th>
             <th>Nama Divisi</th>
@@ -26,6 +26,5 @@
                 <td><a href="divisi/{{ $dv->id }}">Hapus</a></td>
             </tr>
         @endforeach
-
     </table>
 @endsection

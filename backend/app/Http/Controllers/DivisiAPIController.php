@@ -14,7 +14,7 @@ class DivisiAPIController extends Controller
     public function index()
     {
         $divisi = Divisi::all();
-        return json_encode($divisi);
+        return response()->json($divisi);
     }
 
     /**
@@ -73,6 +73,5 @@ class DivisiAPIController extends Controller
     {
         $divisi = Divisi::find($request->id);
         $divisi->delete();
-
     }
 }

@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modernize Free</title>
+  {{-- seusiakan path css, href, image, dan javascript --}}
   <link rel="shortcut icon" type="image/png" href="/modernize/assets/images/logos/favicon.png" />
   <link rel="stylesheet" href="/modernize/assets/css/styles.min.css" />
 </head>
